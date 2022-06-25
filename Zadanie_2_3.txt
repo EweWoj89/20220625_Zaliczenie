@@ -1,0 +1,28 @@
+Zadanie 2
+
+Zbadanie statusu: git status
+Dodanie brakuj¹cych plików: git add .
+Potwierdzenie: git commit -m
+Wys³anie do zdalnego repo: git push origin master
+
+
+Zadanie 3 
+
+a) Poka¿ wszystkie dane o sprzeda¿y kawy Latte i Long Black bez sprzeda¿y w Philadelfii
+
+select * from CoffeShop.xlsx
+where Product in ('Latte','Long Black') and City not in ('Philadelphia') 
+
+b) Poka¿ kawy kupione przez william thompson_86 i mark taylor_113
+
+select 
+Product as Kawa 
+from CoffeShop.xlsx
+where Customer_ref in ('thompson_86','mark taylor_113')
+
+c) Poka¿ miasta gdzie zakupiono Capuccino i Flat White
+
+select distinct 
+City as Miasto 
+from CoffeShop.xlsx
+where Product in ('Capuccino','Flat White')
